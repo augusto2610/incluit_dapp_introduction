@@ -1,0 +1,20 @@
+Clase 11/01/2022
+
+Truffle basics
+https://www.youtube.com/watch?v=62f757RVEvU
+‘truffle init’
+Carpetas y archivos:
+“contracts”
+“migrations”: Decirle a truffle como deployar contratos
+“test”: test en Solidity o NodeJs.
+file: “truffle-config.js”
+‘truffle compile’ Compila todos los smart contracts
+Explicar “build” file .json
+
+Testing
+‘truffle test’: Corre todos los test. Por defecto en ambiente test.
+
+Deploying
+‘truffle develop’
+‘migrate –reset’ Run all migrations files (dentro de truffle Blockchain)
+‘truffle migrate –reset –network myNetworkTag’ Run all migrations files en especifica network
