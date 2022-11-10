@@ -6,7 +6,6 @@
 
 - El proyecto debe utilizar la suite de truffle
 
-
 - El código del proyecto tiene que estar bien formateado, siguiendo los estándares recomendados por solidity.
 
 - Los contratos tienen que tener sus unit tests, tratando de tener el mayor coverage posible (Pensar test que realmente aporten)
@@ -51,7 +50,7 @@ la atención de futuros inversores.
 El proceso de “tokenización” simplemente es recibir los datos del ticket por parámetros en el constructor.
 
 - Los atributos del contrato Ticket son:     
-- id: Un identificador único para cada ticket
+-- id: Un identificador único para cada ticket
 - eventName: El nombre del evento
 - eventDate: La fecha del evento
 - price: el precio en ethers del ticket
