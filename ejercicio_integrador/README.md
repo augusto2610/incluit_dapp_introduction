@@ -50,15 +50,15 @@ la atención de futuros inversores.
 El proceso de “tokenización” simplemente es recibir los datos del ticket por parámetros en el constructor.
 
 - Los atributos del contrato Ticket son:     
--- id: Un identificador único para cada ticket
-- eventName: El nombre del evento
-- eventDate: La fecha del evento
-- price: el precio en ethers del ticket
-- eventDescription: Una descripción corta del evento
-- eventType: el tipo de evento, en la v1 los tipos son Sports, Music, Cinema.
-- status: el estado del ticket, en la v1 los estados son: Used, Valid, Expired.
-- transferStatus: indica si es transferible o no, los estados son: Transferible, NoTransferible
-- owner: el address que es dueño del ticket.
+  - id: Un identificador único para cada ticket
+  - eventName: El nombre del evento
+  - eventDate: La fecha del evento
+  - price: el precio en ethers del ticket
+  - eventDescription: Una descripción corta del evento
+  - eventType: el tipo de evento, en la v1 los tipos son Sports, Music, Cinema.
+  - status: el estado del ticket, en la v1 los estados son: Used, Valid, Expired.
+  - transferStatus: indica si es transferible o no, los estados son: Transferible, NoTransferible
+  - owner: el address que es dueño del ticket.
 
 - Deberá tener una función para poder cambiar el precio del Ticket.
 
