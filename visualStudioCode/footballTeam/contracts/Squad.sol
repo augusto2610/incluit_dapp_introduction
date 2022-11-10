@@ -9,7 +9,7 @@ contract Squad is Ownable {
     Player[] private players;
 
     event FundsReceived(uint256 amount);
-    event PlayerAquired();
+    event PlayerAquired(uint256 price);
 
     receive() external payable {
         emit FundsReceived(msg.value);
@@ -32,10 +32,11 @@ contract Squad is Ownable {
         players.push(player);
     }
 
-    function buyPlayer(address sellerAddress, Player newPlayer)
+    function buyPlayer(address sellerAddress, address newPlayerAddress)
         public
         onlyOwner
     {
+        Player newPlayer = Player(newPlayerAddress);
         require(
             address(this).balance >= newPlayer.getMarketPrice(),
             "El equipo no tiene fondos suficientes"
@@ -45,7 +46,7 @@ contract Squad is Ownable {
         );
         require(sent, "Error en la transferencia");
         players.push(newPlayer);
-        emit PlayerAquired();
+        emit PlayerAquired(newPlayer.getMarketPrice());
     }
 
     function getPlayers() public view returns (Player[] memory) {
