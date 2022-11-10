@@ -4,7 +4,7 @@ const utils = require("./helpers/utils");
 
 contract("Squad", function (accounts) {
   let contract;
-  //Es el address que deployo el contrato
+  //alice (accounts[o]) es el address que deployo el contrato
   const [alice, bob] = accounts;
 
   beforeEach(async () => {
@@ -63,9 +63,11 @@ contract("Squad", function (accounts) {
       //Set up
       let ownerOfPlayer = bob;
       let newPlayer = await Player.new("Messi", "DEL", 2);
+      //Ether
       let contractBalance = 1;
-
+      //Send ethers to contract
       await web3.eth.sendTransaction({ to: contract.address, from: bob, value: web3.utils.toWei(contractBalance.toString(), "ether") });
+
       //Act
       await contract.buyPlayer(
         ownerOfPlayer,
@@ -79,9 +81,11 @@ contract("Squad", function (accounts) {
       //Set up
       let ownerOfPlayer = bob;
       let newPlayer = await Player.new("Messi", "DEL", 2);
+      //Ether
       let contractBalance = 1;
-
+      //Send ethers to contract
       await web3.eth.sendTransaction({ to: contract.address, from: bob, value: web3.utils.toWei(contractBalance.toString(), "ether") });
+
       //Act
       let tx = await contract.buyPlayer(
         ownerOfPlayer,
@@ -101,7 +105,7 @@ contract("Squad", function (accounts) {
       let newPlayer = await Player.new("Messi", "DEL", playerPrice);
       //Ether
       let contractBalance = 1;
-
+      //Send ethers to contract
       await web3.eth.sendTransaction({ to: contract.address, from: bob, value: web3.utils.toWei(contractBalance.toString(), "ether") });
       //Act
       let tx = await contract.buyPlayer(
